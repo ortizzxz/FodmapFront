@@ -1,0 +1,36 @@
+.legend {
+    margin-top: 20px;
+    overflow-x: auto; /* Para permitir desplazamiento horizontal si es necesario */
+    white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+    text-align: center; /* Centramos el contenido */
+}
+
+.legend h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.legend-item {
+    display: inline-flex; /* Mostrar elementos en una sola línea */
+    align-items: center;
+    margin-right: 20px; /* Agregamos espacio entre los elementos */
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.low {
+    background-color: #CCFFCC; /* Verde */
+}
+
+.medium {
+    background-color: #f7f782; /* Amarillo */
+}
+
+.high {
+    background-color: #FFCCCC; /* Rojo */
+}
