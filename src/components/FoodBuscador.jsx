@@ -1,40 +1,19 @@
 import { findAll } from "../services/foodService";
 import { useEffect, useState } from "react"
-
+import '../styles/App.css'
+import '../styles/App2.css'
 
 const initialDataForm = {
     nombre: ''
 }
 
-export const FoodBuscador = () => {
-
-    const [form, setForm] = useState(initialDataForm);
-
-    const { nombre } = form;
-
-
-    return(
-        <>
-        <form onSubmit={(event) => {
-            event.preventDefault();
-
-            if (!nombre) {
-                return findAll();
-            }
-            setForm(initialDataForm);
-        } } />
-        
-        <div>
-            <input type="text" placeholder="Alimento..." name="nombre" value={nombre} 
-            onChange={ (event) => setForm({...form, nombre: event.target.value})}/>
-        </div>
-
-        <div>
-            <button type="submit">
-                {'Buscar'}
-            </button>
-        </div>
-            
-        </>
-    )
-}
+export const FoodBuscador = ({ setSearchTerm }) => {
+    return (
+        <input
+            type="text"
+            placeholder="Buscar alimento..."
+            className="form-control my-3 w-100"
+            onChange={(event) => setSearchTerm(event.target.value)}
+        />
+    );
+};

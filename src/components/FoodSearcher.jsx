@@ -2,7 +2,7 @@ import { FoodDetails } from "./FoodDetails"
 import '../styles/App.css'
 import '../styles/App2.css'
 
-export const FoodSearcher = ({ alimento = [] }) => {
+export const FoodSearcher = ({ alimento }) => {
 
     return (
         <div id="productGrid">
