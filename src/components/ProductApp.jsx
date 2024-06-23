@@ -8,7 +8,8 @@ import { FoodBuscador } from './FoodBuscador';
 
 export const ProductApp = () => {
 
-    const[alimentos, setAlimentos] = useState([]);
+    const [alimentos, setAlimentos] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
     
     const getFood = async () => {
         const result = await findAll();
@@ -20,6 +21,9 @@ export const ProductApp = () => {
         getFood();
     }, []);
 
+    const filteredAlimentos = alimentos.filter(alimento =>
+        alimento.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <div className='container'>
@@ -28,11 +32,11 @@ export const ProductApp = () => {
             </div>
 
             <div> 
-                <FoodBuscador />
+                <FoodBuscador setSearchTerm={setSearchTerm}/>
             </div>
             
             <div className='legend'>
-                <FoodSearcher alimento={alimentos}/>
+                <FoodSearcher alimento={filteredAlimentos}/>
             </div>
         </div>
     );

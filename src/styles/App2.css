@@ -24,13 +24,13 @@
 }
 
 .low {
-    background-color: #CCFFCC; /* Verde */
+    background-color: #c1fd9e; /* Verde */
 }
 
 .medium {
-    background-color: #f7f782; /* Amarillo */
+    background-color: #fffd69; /* Amarillo */
 }
 
 .high {
-    background-color: #FFCCCC; /* Rojo */
+    background-color: #ff8282; /* Rojo */
 }
