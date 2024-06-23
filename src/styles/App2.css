@@ -5,9 +5,9 @@
     text-align: center; /* Centramos el contenido */
 }
 
-.legend h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.legend p {
+    font-size: 15px;
+    color: black;
 }
 
 .legend-item {
