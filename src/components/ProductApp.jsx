@@ -4,6 +4,7 @@ import '../styles/App.css'
 import '../styles/App2.css'
 import { FoodSearcher } from './FoodSearcher'
 import { useEffect } from 'react';
+import { FoodBuscador } from './FoodBuscador';
 
 export const ProductApp = () => {
 
@@ -24,6 +25,10 @@ export const ProductApp = () => {
         <div className='container'>
             <div>
                 <h1>Búsqueda de Alimentos FODMAP</h1>
+            </div>
+
+            <div> 
+                <FoodBuscador />
             </div>
             
             <div className='legend'>
