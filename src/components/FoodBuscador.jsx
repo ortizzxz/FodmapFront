@@ -12,7 +12,7 @@ export const FoodBuscador = ({ setSearchTerm }) => {
         <input
             type="text"
             placeholder="Buscar alimento..."
-            className="form-control my-3 w-100"
+            id="searchBar"
             onChange={(event) => setSearchTerm(event.target.value)}
         />
     );
