@@ -21,8 +21,12 @@ export const ProductApp = () => {
         getFood();
     }, []);
 
+    const normalizeString = (str) => {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    };
+    
     const filteredAlimentos = alimentos.filter(alimento =>
-        alimento.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+        normalizeString(alimento.nombre.toLowerCase()).includes(normalizeString(searchTerm.toLowerCase()))
     );
 
     return (
