@@ -36,7 +36,8 @@ export const ProductApp = () => {
         <>
         <div className='agrupacion'>
             <h1>Filtrar búsqueda</h1>
-            <h2>Grupo de alimento</h2>
+            <hr />
+            <h2>Grupo de alimento...</h2>
             <GrupoFilter setSelectedGroup={setSelectedGroup} />
 
         </div>
