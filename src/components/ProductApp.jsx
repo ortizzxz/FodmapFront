@@ -16,6 +16,7 @@ export const ProductApp = () => {
     const getFood = async () => {
         const result = await findAll();
 
+        console.log(result.data._embedded.alimentoes); // Verifica la estructura de los datos
         setAlimentos(result.data._embedded.alimentoes); // nombre de la tabla, no de la entidad.
     };
 
@@ -29,7 +30,7 @@ export const ProductApp = () => {
     
     const filteredAlimentos = alimentos.filter(alimento =>
         normalizeString(alimento.nombre.toLowerCase()).includes(normalizeString(searchTerm.toLowerCase())) &&
-        (selectedGroup === '' || alimento.grupo === selectedGroup)
+        (selectedGroup === '' || alimento.grupo.toLowerCase() === selectedGroup.toLocaleLowerCase())
     );
 
     return (

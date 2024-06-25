@@ -11,9 +11,9 @@ export const GrupoFilter = ({ setSelectedGroup }) => {
         <div className='grupoFiltro'>
             <select onChange={handleGroupChange}>
                 <option value="">Todos los grupos</option>
-                <option value="Grupo1">Carbohidratos</option>
-                <option value="Grupo2">Proteínas</option>
-                <option value="Grupo3">Grasas</option>
+                <option value="carbohidratos">Carbohidratos</option>
+                <option value="proteina">Proteínas</option>
+                <option value="grasas">Grasas</option>
             </select>
         </div>
     );
