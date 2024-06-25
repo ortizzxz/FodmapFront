@@ -5,12 +5,14 @@ import '../styles/App2.css'
 import { FoodSearcher } from './FoodSearcher'
 import { useEffect } from 'react';
 import { FoodBuscador } from './FoodBuscador';
+import { GrupoFilter } from './GrupoFilter';
 
 export const ProductApp = () => {
 
     const [alimentos, setAlimentos] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    
+    const [selectedGroup, setSelectedGroup] = useState('');
+
     const getFood = async () => {
         const result = await findAll();
 
@@ -26,23 +28,34 @@ export const ProductApp = () => {
     };
     
     const filteredAlimentos = alimentos.filter(alimento =>
-        normalizeString(alimento.nombre.toLowerCase()).includes(normalizeString(searchTerm.toLowerCase()))
+        normalizeString(alimento.nombre.toLowerCase()).includes(normalizeString(searchTerm.toLowerCase())) &&
+        (selectedGroup === '' || alimento.grupo === selectedGroup)
     );
 
     return (
-        <div className='container'>
-            <div>
-                <h1>Búsqueda de Alimentos FODMAP</h1>
-            </div>
+        <>
+        <div className='agrupacion'>
+            <h1>Filtrar búsqueda</h1>
+            <h2>Grupo de alimento</h2>
+            <GrupoFilter setSelectedGroup={setSelectedGroup} />
 
-            <div> 
-                <FoodBuscador setSearchTerm={setSearchTerm}/>
-            </div>
-            
-            <div className='legend'>
-                <FoodSearcher alimento={filteredAlimentos}/>
-            </div>
         </div>
+        
+        <div className='container'>
+                <div>
+                    <h1>Búsqueda de Alimentos FODMAP</h1>
+                </div>
+
+                <div>
+                    <FoodBuscador setSearchTerm={setSearchTerm} />
+                </div>
+
+                <div className='legend'>
+                    <FoodSearcher alimento={filteredAlimentos} />
+                </div>
+        </div>
+        
+        </>
     );
 
 }
