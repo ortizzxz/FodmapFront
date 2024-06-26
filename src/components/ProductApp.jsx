@@ -6,6 +6,7 @@ import { FoodSearcher } from './FoodSearcher'
 import { useEffect } from 'react';
 import { FoodBuscador } from './FoodBuscador';
 import { GrupoFilter } from './GrupoFilter';
+import { CategoriaFilter } from './CategoriaFilter';
 
 export const ProductApp = () => {
 
@@ -36,10 +37,18 @@ export const ProductApp = () => {
     return (
         <>
         <div className='agrupacion'>
+            
             <h1>Filtrar búsqueda</h1>
+            
             <hr />
+            
             <h2>Grupo de alimento...</h2>
             <GrupoFilter setSelectedGroup={setSelectedGroup} />
+            
+            <hr />
+
+            <h2>Categoría...</h2>
+            <CategoriaFilter setSelectedGroup={setSelectedGroup} />
 
         </div>
         
