@@ -11,9 +11,12 @@ export const CategoriaFilter = ({ setSelectedGroup }) => {
         <div className='grupoFiltro'>
             <select onChange={handleGroupChange}>
                 <option value="">Todas las categorías</option>
-                <option value="carbohidratos">Frutas y Verduras</option>
-                <option value="proteina">Proteínas</option>
-                <option value="grasas">Grasas</option>
+                <option value="frutas">Frutas</option>
+                <option value="legumbres">Legumbres</option>
+                <option value="cereales">Cereales</option>
+                <option value="lacteos">Lacteos</option>
+                <option value="frutos secos y aceites">Frutos secos y Aceites</option>
+                <option value="carnes">Carnes</option>
             </select>
         </div>
     );

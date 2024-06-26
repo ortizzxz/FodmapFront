@@ -50,6 +50,7 @@ export const ProductApp = () => {
             <h2>Categoría...</h2>
             <CategoriaFilter setSelectedGroup={setSelectedGroup} />
 
+            <hr />
         </div>
         
         <div className='container'>
