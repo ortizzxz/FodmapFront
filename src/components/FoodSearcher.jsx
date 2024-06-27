@@ -1,6 +1,6 @@
 import { FoodDetails } from "./FoodDetails"
 import '../styles/App.css'
-import '../styles/App2.css'
+import '../styles/legendStyle.css'
 
 export const FoodSearcher = ({ alimento }) => {
 

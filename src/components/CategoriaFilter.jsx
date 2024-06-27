@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/App.css'
-import '../styles/App2.css'
+import '../styles/legendStyle.css'
 
 export const CategoriaFilter = ({ setSelectedGroup }) => {
     const handleGroupChange = (event) => {
