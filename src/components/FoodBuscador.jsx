@@ -1,7 +1,7 @@
 import { findAll } from "../services/foodService";
 import { useEffect, useState } from "react"
 import '../styles/App.css'
-import '../styles/App2.css'
+import '../styles/legendStyle.css'
 
 const initialDataForm = {
     nombre: ''
